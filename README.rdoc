@@ -11,7 +11,7 @@ This project was created with:
 
 * System dependencies = Postgresql installed
 
-* Configuration
+* Configuration = gem install foreman
 
 * Database creation = rake db:create
 
