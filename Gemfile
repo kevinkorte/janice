@@ -16,6 +16,8 @@ gem 'coffee-rails', '~> 4.1.0'
 
 # Use Devise for user auth
 gem 'devise'
+# Use Stripe to manage subscriptions
+gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks

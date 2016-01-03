@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  devise_for :members
+  devise_for :members, controllers: {
+    registrations: 'members/registrations'
+  }
   get 'pages/welcome'
 
   # The priority is based upon order of creation: first created -> highest priority.
