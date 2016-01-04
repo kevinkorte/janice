@@ -11,10 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160103100424) do
+ActiveRecord::Schema.define(version: 20160104043913) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "member_meta", force: :cascade do |t|
+    t.integer  "member_id"
+    t.string   "stripe_customer_id"
+    t.string   "stripe_plan_id"
+    t.string   "stripe_end_date"
+    t.string   "stripe_subscription_id"
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+  end
 
   create_table "members", force: :cascade do |t|
     t.string   "email",                  default: "", null: false

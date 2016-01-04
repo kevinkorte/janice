@@ -8,9 +8,11 @@ class Members::RegistrationsController < Devise::RegistrationsController
   # end
 
   # POST /resource
-  # def create
-  #   super
-  # end
+  def create
+    super do
+      
+    end
+  end
 
   # GET /resource/edit
   # def edit
