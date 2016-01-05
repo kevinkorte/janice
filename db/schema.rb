@@ -26,6 +26,8 @@ ActiveRecord::Schema.define(version: 20160104043913) do
     t.datetime "updated_at",             null: false
   end
 
+  add_index "member_meta", ["member_id"], name: "index_member_meta_on_member_id", using: :btree
+
   create_table "members", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false

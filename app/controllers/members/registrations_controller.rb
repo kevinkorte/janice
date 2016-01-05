@@ -10,7 +10,12 @@ class Members::RegistrationsController < Devise::RegistrationsController
   # POST /resource
   def create
     super do
-      
+      customer = Stripe::Customer.create(
+        :email => params[:member][:email],
+        :plan => '1'
+      )
+
+      debug(customer)
     end
   end
 
