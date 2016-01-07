@@ -14,6 +14,8 @@ gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
+# Use dot env
+gem 'dotenv-rails', :groups => [:development, :test]
 # Use Devise for user auth
 gem 'devise'
 # Use Stripe to manage subscriptions

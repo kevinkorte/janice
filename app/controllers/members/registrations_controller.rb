@@ -10,12 +10,20 @@ class Members::RegistrationsController < Devise::RegistrationsController
   # POST /resource
   def create
     super do
+
       customer = Stripe::Customer.create(
         :email => params[:member][:email],
+        #:source  => params[:stripeToken],
         :plan => '1'
       )
 
-      debug(customer)
+      member = Member.find_by_email(params[:member][:email])
+      member.create_member_meta(stripe_customer_id: customer.id,
+                                stripe_plan_id: customer.subscriptions.data.first['plan'].id,
+                                stripe_end_date: customer.subscriptions.data.first.current_period_end,
+                                stripe_subscription_id: customer.subscriptions.data.first.id
+                                )
+
     end
   end
 
