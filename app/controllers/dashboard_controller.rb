@@ -3,4 +3,8 @@ class DashboardController < ApplicationController
 	def index
 
 	end
+
+	def settings
+		@member = current_member
+	end
 end

@@ -10,7 +10,9 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'pages#welcome'
 
-  resources :dashboard
+  resources :dashboard do
+    get 'settings', on: :collection
+  end
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
