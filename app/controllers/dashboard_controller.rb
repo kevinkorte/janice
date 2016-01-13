@@ -6,5 +6,6 @@ class DashboardController < ApplicationController
 
 	def settings
 		@member = current_member
+		@exp_time = @member.member_meta.stripe_end_date
 	end
 end

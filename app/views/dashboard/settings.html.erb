@@ -1,16 +1,17 @@
 Settings
 
-<%= render "partials/nav_col" %>
-
-<div class="pure-menu pure-menu-horizontal">
-    <a href="#" class="pure-menu-heading pure-menu-link">BRAND</a>
-    <ul class="pure-menu-list">
-        <li class="pure-menu-item"><a href="#" class="pure-menu-link">News</a></li>
-        <li class="pure-menu-item"><a href="#" class="pure-menu-link">Sports</a></li>
-        <li class="pure-menu-item"><a href="#" class="pure-menu-link">Finance</a></li>
-    </ul>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-3">
+            <ul class="nav nav-pills nav-stacked">
+                <li role="presentation"><a href="#">Profile</a></li>
+            </ul>
+        </div>
+        <div class="col-md-9">
+            <ul class="nav nav-tabs">
+                <li role="presentation" class="active"><a href="#">Profile</a></li>
+                <li role="presentation"><a href="#">Subscription</a></li>
+            </ul>
+        </div>
+    </div>
 </div>
-
-<%= debug(@member.email) %>
-
-<%= DateTime.strptime(@member.member_meta.stripe_end_date,'%s') %>

@@ -20,6 +20,8 @@ gem 'dotenv-rails', :groups => [:development, :test]
 gem 'devise'
 # Use Stripe to manage subscriptions
 gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
+# Use moment js
+gem 'momentjs-rails'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
