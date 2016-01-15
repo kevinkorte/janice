@@ -14,6 +14,8 @@ Rails.application.routes.draw do
     get 'settings', on: :collection
   end
 
+  resources :showings
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

@@ -6,6 +6,12 @@
     position: fixed;
     top: 0;
     bottom: 0;
-    width: 220px;
-    //background: #4D394B;
+    width: 80px;
+    background: #252830;
+}
+
+.col-menu li a {
+    display: block;
+    height: 80px;
+    background: #000;
 }
