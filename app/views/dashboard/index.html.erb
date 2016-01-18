@@ -1,13 +1,12 @@
 
+<%= render 'partials/navbar' %>
+
+
 
 <div class="container">
     <div class="row">
         <div class="col-md-3">
-            <ul class="nav nav-pills nav-stacked">
-                <li>Item One</li>
-                <li role="presentation"><a href="#">Profile</a></li>
-                <li role="presentation"><%= link_to "New Showing", new_showing_path %></li>
-            </ul>
+           <%= link_to "New Showing", new_showing_path %>
         </div>
     </div>
 </div>

@@ -1,3 +1,36 @@
-<%= form_for @showing do |f| %>
-	<%= f.text_field :address %>
-<% end %>
+<%= render 'partials/navbar' %>
+
+<div class="wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>New Showing</h1>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+            <%= simple_form_for @showing do |f| %>
+                <div class="row">
+                    <div class="col-sm-8">
+                        <%= f.input :address %>
+                    </div>
+                    <div class="col-sm-4">
+                        <%= f.input :address_ext %>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <%= f.input :city %>
+                    </div>
+                    <div class="col-sm-3">
+                        <%= f.input :state %>
+                    </div>
+                    <div class="col-sm-3">
+                        <%= f.input :zip %>
+                    </div>
+                </div>
+                <%= f.input :mls %>
+            <% end %>
+  
