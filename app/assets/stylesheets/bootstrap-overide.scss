@@ -1,0 +1,48 @@
+/*
+Applies to  nav-tabs  nested in container fluid
+
+clear the default border bottom from the nav-tabs
+class when we want the same border bottom to span
+the full width of the div
+*/
+.container-fluid .nav-tabs {
+	border-bottom: none;
+}
+
+/*
+Applies to nav-tabs on dark backgrounds
+
+Changes the hover styles of nav-tabs when on
+dark backgrounds
+*/
+.nav-tabs>li>a:hover {
+	border-color: lighten(#252830, 10%);
+	border-bottom: 1px solid transparent;
+}
+.nav>li>a:focus, .nav>li>a:hover {
+	background: transparent;
+}
+
+/*
+Applies to inputs for form restyles
+
+*/
+.form-control {
+	box-shadow: none;
+	background: #fbfbfb;
+}
+.form-control:focus {
+	box-shadow: none;
+	background: #fff;
+}
+
+/*
+Applies to panels wrapping forms
+
+Bootstrap gives us margin bottom, we need margin top
+Taking advantage of collapsing margins
+*/
+.panel-new {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}

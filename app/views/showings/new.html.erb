@@ -1,36 +1,81 @@
 <%= render 'partials/navbar' %>
 
-<div class="wrapper">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <h1>New Showing</h1>
+
+<div class="container-fluid gray-bg">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <h1>New Showing <button type="button" class="btn btn-success btn-lg pull-right">Save</button></h1>
+
+            <ul class="nav nav-tabs">
+                <li role="presentation" class="active"><a href="#">Home</a></li>
+                <li role="presentation"><a href="#">Profile</a></li>
+                <li role="presentation"><a href="#">Messages <span class="badge">42</span></a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+        <div class="col-md-8 col-md-offset-2">
+
+
+<div class="panel panel-default panel-new">
+    <div class="panel-heading">
+        <h3 class="panel-title"><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span> Location</h3>
+    </div>
+    <div class="panel-body">
+        <%= simple_form_for @showing do |f| %>
+            <div class="row">
+                <div class="col-sm-8">
+                    <%= f.input :address %>
+                </div>
+                <div class="col-sm-4">
+                    <%= f.input :address_ext %>
+                </div>
             </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <%= f.input :city %>
+                </div>
+                <div class="col-sm-3">
+                    <%= f.input :state %>
+                </div>
+                <div class="col-sm-3">
+                    <%= f.input :zip %>
+                </div>
+            </div>
+            <%= f.input :mls %>
+        <% end %>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title"><span class="glyphicon glyphicon-time"></span> Time</h3>
+    </div>
+    <div class="panel-body">
+        <%= simple_form_for @showing do |f| %>
+            <div class="row">
+                <div class="col-sm-6">
+                    <%= f.input :city %>
+                </div>
+                <div class="col-sm-3">
+                    <%= f.input :state %>
+                </div>
+                <div class="col-sm-3">
+                    <%= f.input :zip %>
+                </div>
+            </div>
+        <% end %>
+    </div>
+</div>
+
+
+
+           
         </div>
     </div>
 </div>
 
 
-            <%= simple_form_for @showing do |f| %>
-                <div class="row">
-                    <div class="col-sm-8">
-                        <%= f.input :address %>
-                    </div>
-                    <div class="col-sm-4">
-                        <%= f.input :address_ext %>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-6">
-                        <%= f.input :city %>
-                    </div>
-                    <div class="col-sm-3">
-                        <%= f.input :state %>
-                    </div>
-                    <div class="col-sm-3">
-                        <%= f.input :zip %>
-                    </div>
-                </div>
-                <%= f.input :mls %>
-            <% end %>
+
+            
   
