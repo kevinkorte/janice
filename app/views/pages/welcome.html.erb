@@ -1,2 +1,17 @@
-<h1>Pages#welcome</h1>
-<p>Find me in app/views/pages/welcome.html.erb</p>
+<% content_for :body_class, "welcome" %>
+
+<div class="container-fluid main">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8"></div>
+            <div class="col-md-4 card">
+                <div class="header">
+                    <%= image_tag("janice.jpg", size: "30", class: "avatar__small") %><h6 class="inline-block">Janice is now showing</h6>
+                </div>
+                <hr>
+                <h5>123 Main St</h5>
+            </div>
+        </div>
+    </div>
+
+</div>
